@@ -7,6 +7,12 @@
 
   <display-name>Archetype Created Web Application</display-name>
 
+  <!-- initialize the context parameter -->
+  <context-param>
+    <param-name>dbURL</param-name>
+    <param-value>jdbc:mysql://localhost:3306/studentdb</param-value>
+  </context-param>
+
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
@@ -32,6 +38,15 @@
     <servlet-class>in.app1.WelcomeServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>configservlet</servlet-name>
+    <servlet-class>in.app5.ConfigServlet</servlet-class>
+    <init-param>
+      <param-name>adminEmail</param-name>
+      <param-value>admin@gmail.com</param-value>
+    </init-param>
+  </servlet>
+
   <!-- Url pattern mapping -->
   <servlet-mapping>
     <servlet-name>loginservlet1</servlet-name>
@@ -51,5 +66,10 @@
   <servlet-mapping>
     <servlet-name>welcomeservlet1</servlet-name>
     <url-pattern>/welcomeservlet1</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>configservlet</servlet-name>
+    <url-pattern>/configservlet</url-pattern>
   </servlet-mapping>
 </web-app>
