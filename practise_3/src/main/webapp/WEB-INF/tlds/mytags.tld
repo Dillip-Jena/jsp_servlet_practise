@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee 
+                            https://jakarta.ee/xml/ns/jakartaee/web-jsptaglibrary_3_0.xsd"
+        version="3.0">
+
+    <tlib-version>1.0.0</tlib-version>
+    <short-name>my</short-name>
+    <uri>jakarta.tags.custom</uri>
+
+    <!--First tag-->
+    <tag>
+        <name>greet</name>
+        <tag-class>in.tags.GreetTag</tag-class>
+        <body-content>empty</body-content>
+
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <!--Second tag-->
+    <tag>
+        <name>uppercase</name>
+        <tag-class>in.tags.UppercaseTag</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+
+    <!--Third tag-->
+    <tag>
+        <name>isEven</name>
+        <tag-class>in.tags.IsEven</tag-class>
+        <body-content>scriptless</body-content>
+
+        <attribute>
+            <name>number</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <!--Fourth tag-->
+    <tag>
+        <name>repeat</name>
+        <tag-class>in.tags.RepeatTag</tag-class>
+        <body-content>scriptless</body-content>
+
+        <attribute>
+            <name>times</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <!--Fifth tag-->
+    <tag>
+        <name>sum</name>
+        <tag-class>in.tags.SumTag</tag-class>
+        <body-content>empty</body-content>
+
+        <attribute>
+            <name>a</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>b</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <!--Sixth tag-->
+    <tag>
+        <name>ifContains</name>
+        <tag-class>in.tags.IfContains</tag-class>
+        <body-content>scriptless</body-content>
+
+        <attribute>
+            <name>text</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>word</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <!--Seventh tag-->
+    <tag>
+        <name>table</name>
+        <tag-class>in.tags.TableTag</tag-class>
+        <body-content>empty</body-content>
+
+        <attribute>
+            <name>row</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>col</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+</taglib>
